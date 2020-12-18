@@ -2,15 +2,15 @@
 //this calculates the total of each checkbox as they are selected or unselected. It also includes the delivery charge.
 //start off with value total and as each is changed adds it in or takes it away. The total is fixed to 2 decimal places
 var total = 0.0;
- $(document).on("change", ".checks", function() {
-    var checked = $('.checks:checked'),
-        sum = checked.get().reduce(function(prev, item) {
-            return prev + parseFloat(item.getAttribute('data-price'));
-        }, 0);
-
-    $('#tots').text( sum.toFixed(2) );
+$(document).on("change", ".checks", function () {
+  var checked = $(".checks:checked"),
+    sum = checked.get().reduce(function (prev, item) {
+      return prev + parseFloat(item.getAttribute("data-price"));
+    }, 0);
+  localStorage.setItem("total", sum.toFixed(2));
+  $("#tots").text(sum.toFixed(2));
 });
-  
+
 var expanded = false;
 function showCheckboxes() {
   var checkboxes = document.getElementById("checkboxes");
@@ -82,4 +82,3 @@ function showCheckboxes5() {
     expanded = false;
   }
 }
-
