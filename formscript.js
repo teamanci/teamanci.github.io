@@ -123,7 +123,7 @@ function checkEircode() {
 var total;
 window.onload = function () {
   total = localStorage.getItem("total");
-  $("#total").text("€" + total);
+  $("#total").text("€" + parseFloat(total).toFixed(2));
 
   $(".dropdown-item").click(function () {
     console.log("boobs");
@@ -139,8 +139,8 @@ function totalPayable() {
   var currentValue = total;
   if (document.getElementById("pounds").checked) {
     currentValue = total * 0.9;
-    $("#total").text("£" + currentValue);
+    $("#total").text("£" + parseFloat(currentValue).toFixed(2));
   } else {
-    $("#total").text("€" + currentValue);
+    $("#total").text("€" + parseFloat(currentValue).toFixed(2));
   }
 }
