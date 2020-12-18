@@ -151,12 +151,17 @@ body {
 .dropdown {
   margin-top: 5px;
 }
+/* .heading {
+  display: none;
+} */
 .checkout {
   justify-content: space-evenly;
   background-image: url("images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
   background-size: cover;
   padding: 20px;
   min-width: 200px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
 }
 .christmasTree {
   animation: sway1 16s infinite;

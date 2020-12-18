@@ -21,7 +21,6 @@ function checkName(username, message, typeName) {
     message.innerHTML = typeName + " OK!";
   } else {
     isUsernameValid = false;
-
     message.style.color = "#969086";
     message.style.backgroundColor = invalid;
     message.innerHTML = typeName + " needed";
@@ -58,18 +57,18 @@ function checkEmail() {
 }
 var isAddressValid = false;
 function checkAddress() {
-  var email = document.getElementById("address1");
+  var address = document.getElementById("address1");
   var message = document.getElementById("addressValidation");
   var valid = "#619196";
   var invalid = "#DFC7C1";
   // Trim removes whitespace
-  if (email.value.trim().length > 0) {
-    isEmailValid = true;
+  if (address.value.trim().length > 0) {
+    isAddressValid = true;
     message.style.color = "white";
     message.style.backgroundColor = valid;
     message.innerHTML = "Address Ok!";
   } else {
-    isEmailValid = false;
+    isAddressValid = false;
 
     message.style.color = "#969086";
     message.style.backgroundColor = invalid;
@@ -79,19 +78,19 @@ function checkAddress() {
 }
 var isAddress2Valid = false;
 function checkAddress2() {
-  var email = document.getElementById("address2");
+  var address2 = document.getElementById("address2");
   var message = document.getElementById("address2Validation");
   var valid = "#619196";
   var invalid = "#DFC7C1";
   // Trim removes whitespace
-  if (email.value.trim().length > 0) {
-    isEmailValid = true;
+  if (address2.value.trim().length > 0) {
+    isAddress2Valid = true;
 
     message.style.color = "white";
     message.style.backgroundColor = valid;
     message.innerHTML = "Address Ok!";
   } else {
-    isEmailValid = false;
+    isAddress2Valid = false;
 
     message.style.color = "#969086";
     message.style.backgroundColor = invalid;
@@ -142,5 +141,26 @@ function totalPayable() {
     $("#total").text("£" + parseFloat(currentValue).toFixed(2));
   } else {
     $("#total").text("€" + parseFloat(currentValue).toFixed(2));
+  }
+}
+var elem = document.getElementById("checkout");
+function submitButton() {
+  checkFirstname();
+  checkLastname();
+  checkEmail();
+  checkAddress();
+  checkAddress2();
+  checkEircode();
+  totalPayable();
+  if (
+    isUsernameValid == true &&
+    isEmailValid == true &&
+    isAddressValid == true &&
+    isAddress2Valid == true &&
+    isEircodeValid == true
+  ) {
+    $(".shownCheckout").hide();
+    $(".form").hide();
+    $("#hideCheckout").show();
   }
 }
