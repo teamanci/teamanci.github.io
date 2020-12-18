@@ -1,0 +1,160 @@
+#logo {
+  width: 7cm;
+  height: auto;
+  padding: 10px;
+}
+.navbar-custom {
+  font-family: "Averia Serif Libre";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+#body {
+  background-color: #1b2f41;
+  width: 100%;
+  font-family: "Averia Serif Libre";
+}
+.banner {
+  background-image: url("images/christmasBanner.jpg");
+  width: 100%;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.image {
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.heading {
+  font-family: Averia Serif Libre;
+  font-size: 40px;
+  padding: 20px;
+}
+#details {
+  font-family: Averia Serif Libre;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+#deliveryDetails {
+  font-family: Averia Serif Libre;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.form {
+  padding: 20px;
+  margin-left: 5%;
+}
+.total {
+  background-image: url("images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
+  background-size: cover;
+  border-style: solid;
+  padding: 20px;
+  min-width: 200px;
+}
+.footer {
+  line-height: 20px;
+  background-color: #dfc7c1;
+  position: fixed;
+  width: 100%;
+}
+#firstNameValidation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  min-width: 130px;
+}
+#lastNameValidation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  min-width: 130px;
+}
+#emailValidation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  min-width: 130px;
+}
+#addressValidation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  min-width: 130px;
+}
+#address2Validation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  min-width: 130px;
+}
+#eircodeValidation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 10px;
+  min-width: 130px;
+}
+#dropdownMenuButton {
+  margin-left: 10px;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+.summaryItems {
+  margin: 10px;
+}
+.paymentSummary {
+  margin: 10px;
+}
+.cards {
+  margin-right: 10px;
+}
+.currency {
+  margin-right: 10px;
+}
+.splitBorder {
+  border-top: solid 1px;
+}
+.payment {
+  margin: 10px;
+}
+#button {
+  height: 80px;
+}
+.form-control {
+  margin: 10px;
+}
+body {
+  padding-bottom: 100px;
+}
+#visa2 {
+  width: 70px;
+  height: 50px;
+  border-radius: 15px;
+  margin-left: 10px;
+  text-align: center;
+}
+#mastercard {
+  width: 120px;
+  height: 90px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+#total {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  width: 200px;
+  height: 70px;
+  line-height: 70px;
+}
+.dropdown {
+  margin-top: 5px;
+}

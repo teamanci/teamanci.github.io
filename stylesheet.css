@@ -1,0 +1,119 @@
+#logo {
+  width: 7cm;
+  height: auto;
+  padding: 10px;
+}
+.banner {
+  background-image: url("images/christmasBanner.jpg");
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+}
+.banner p {
+  font-family: "Tangerine";
+  text-align: center;
+  font-size: 90px;
+}
+.navbar-custom {
+  font-family: "Averia Serif Libre";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.links {
+  color: antiquewhite;
+}
+#body {
+  background-color: #1b2f41;
+  width: 100%;
+  font-family: "Averia Serif Libre";
+}
+.borderLine {
+  border-top: solid 1px whitesmoke;
+  margin: 40px;
+}
+.content {
+  color: antiquewhite;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+.picture1 {
+  height: 100%;
+  width: 100%;
+  /* max-width: 500px;
+  max-height: 300px;
+  min-width: 450px; */
+}
+.heading {
+  padding-bottom: 10px;
+}
+#heading2 {
+  display: none;
+  margin-top: 20px;
+}
+#star {
+  text-align: center;
+}
+#starImg {
+  height: 150px;
+  width: 150px;
+}
+.para1 {
+  line-height: 1.3;
+}
+.footer {
+  /* line-height: 70px; */
+  background-color: #ffffff;
+  color: #272727;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  transform: translate(0px, 180px);
+  height: 250px;
+  padding: 10px;
+}
+.footerButton {
+  background-color: #ffffff;
+  color: #272727;
+  position: fixed;
+  bottom: 50px;
+  z-index: 2;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 100%;
+  border: none;
+}
+
+.footerButton:focus {
+  outline: none;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 20px;
+}
+.form-group {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.form-control {
+  width: 50px;
+}
+#emailValidation {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #ee3b3b;
+  display: none;
+  border-radius: 30px;
+  padding: 8px;
+  font-family: Helvetica, AvenirLTStd, Arial;
+  font-weight: bold;
+  text-align: center;
+}
