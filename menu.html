@@ -1,279 +1,635 @@
-<!DOCTYPE html> <!--Created by FQuill as part of the Project for Web Dev Dec 2020-->
+<!DOCTYPE html>
+<!--Created by FQuill as part of the Project for Web Dev Dec 2020-->
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-	<head>
+    <link rel="stylesheet" href="menustylesheet.css" />
 
-		<meta charset="UTF-8">
-	
-		<link rel="stylesheet" href="menustylesheet.css">
-		
-		<title> Meal - Menus </title>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--sets the width of the page to follow the screen width of the device-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		
-		
-		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+    <title>Meal - Menus</title>
 
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">	
-					<div class="wrapper">
-						<div class="head">
-							<img src="logo.png" alt="logo"/>
-							<h1>Menus</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="mains">
-						<div class="btn-group">
-							<button type="button" class="btn btn-primary custom-btn"> Christmas Dinner - Mains </button>
-							<button type="button" class="btn btn-primary custom-btn dropdown-toggle" data-toggle="dropdown">
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li>Free Range Bronze Turkey</li>
-								<li>Honey & Mustard Glazed Ham</li>
-								<li>Duck Fat Roasted Potatoes</li>
-								<li>Roasted Parsnip and Carrots</li>
-								<li>Brussels Sprouts with Bacon</li>
-								<li>Sage and Onion Stuffing</li>
-								<li>Traditional Gravy</li>
-							</ul>
-							<form>
-								<div class="multiselect">
-									<div class="selectBox" onclick="showCheckboxes()">
-										<select>
-											<option>Select an option</option>
-										</select>
-									<div class="overSelect"></div>
-									</div>
-									<div id="checkboxes">
-										<label for="one">
-											<input type="checkbox" name="mains" id="one" class="checks" value="Family Dinner" data-price="230.00"/>  Serves 8-10 people €230.00)</label>
-										<label for="two">
-											<input type="checkbox" name="mains" id="two" class="checks" value="Dinner for Couple" data-price="100.00" />Serves 2-3 people €100.00)</label>
-									</div>
-								</div>
-							</form>	
-						</div>
-					</div>
-				</div><!--closing col div-->
-				<div class="col-sm-6">
-					<div class="sides">
-						<div class="btn-group">
-							<button type="button" class="btn btn-primary custom-btn"> Christmas Dinner - Sides </button>
-							<form>
-								<div class="multiselect">
-									<div class="selectBox" onclick="showCheckboxes1()">
-										<select>
-											<option>Select an option</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-									<div id="checkboxes1">
-										<label for="three">
-											<input type="checkbox" name="sides" id="three" class="checks" value="Cranberry Sauce" data-price="3.50"/>Homemade Cranberry Sauce - €3.50 serves 8</label>
-										<label for="four">
-											<input type="checkbox" name="sides" id="four" class="checks" value="Bread Sauce" data-price="3.50" />Homemade Bread Sauce €3.50 serves 8</label>
-										<label for="five">
-											<input type="checkbox" name="sides" id="five" class="checks" value="Smoked Salmon" data-price="25.00" />Smoked Salmon and Homemade Brown Soda Bread - €25 serves 8</label>
-										<label for="six">
-											<input type="checkbox" name="sides" id="six" class="checks" value="Prawn Cocktail" data-price="20.00"/>Prawn Cocktail - €20 serves 8</label>
-									</div> <!--closing div for checkboxes1-->
-								</div> <!--closing div for multiselect-->
-							</form>	
-						</div> <!--closing div for button grp-->
-					</div> <!--closing div for sides-->
-				</div><!--closing div for col-->
-			</div><!--closing div for row-->
-			<div class="row">
-				<div class="col-sm-6">	
-					<div class="family">
-						<div class="btn-group">
-							<button type="button" class="btn btn-primary custom-btn"> Family Gatherings </button>
-							<form>
-								<div class="multiselect">
-									<div class="selectBox" onclick="showCheckboxes2()">
-										<select>
-											<option>Select an option</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-									<div id="checkboxes2">
-										<label for="seven">
-											<input type="checkbox" name="family" id="seven" class="checks" value="Beef Lasagne" data-price="48.00"/>Homemade Beef  Serves 8 €48</label>
-										<label for="eight">
-											<input type="checkbox" name="family" id="eight" class="checks" value="Vegetarian Lasagne" data-price="48.00"/>Homemade Vegetarian Lasagne Serves 8 €48</label>
-										<label for="nine">
-											<input type="checkbox" name="family" id="nine" class="checks" value="Beef Staganoff" data-price="48.00"/>Beef Staganoff Serves 8 €48</label>
-										<label for="ten">
-											<input type="checkbox" name="family" id="ten" class="checks" value="Chicken Curry" data-price="48.00"/>Chicken Curry Serves 8 €48</label>
-										<label for="eleven">
-											<input type="checkbox" name="family" id="eleven" class="checks" value="Platter" data-price="18.00"/>Party Favourites Platter - Wedges, Cocktail Sausages, Chicken Goujons Serves 8 €48</label>
-										<label for="twelve">
-											<input type="checkbox" name="family" id="twelve" class="checks" value="Rice" data-price="18.00"/>Boiled Rice - Serves 8 €18</label>
-										<label for="thirteen">
-											<input type="checkbox" name="family" id="thirteen" class="checks" value="Potato Mash" data-price="15.00"/>Potato Mash - Serves 8 €15</label>
-										<label for="fourteen">
-											<input type="checkbox" name="family" id="fourteen" class="checks" value="Potato Wedges" data-price="20.00"/>Potato Wedges - Serves 8 €20</label>
-										<label for="fifteen">
-											<input type="checkbox" name="family" id="fifteen" class="checks" value="Salad" data-price="18.00"/>Freshly Chopped Salad Leaves with Peppers, Tomato, Cucumber and Onion - Tray serves 8 - €18</label>
-									</div>
-								</div>
-							</form>	
-						</div> <!--closing div for button grp-->
-					</div>	<!--closing div for family-->
-				</div> <!--closing div for col-->
-				<div class="col-sm-6">
-					<div class="party">
-						<div class="btn-group">
-							<button type="button" class="btn btn-primary custom-btn"> Parties and Events </button>
-							<button type="button" class="btn btn-primary custom-btn dropdown-toggle" data-toggle="dropdown">
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">						
-								<li>For parties and Events see also Family Gatherings</li>
-								<li>Our Finger Food selection can include: French Fries, Chicken Wings in BBQ Sauce, Mini Quiches, Mini Beef or Chicken sliders, Pulled Port, Stuffed Mushrooms, or Chicken and Mushroom vol-au-vents.</li>
-								<li>We also have a wonderful selection of vegetarian options</li>
-								<li>Please contact us for more information. We are happy to cater for all events big and small, along with any special requests.</li>		
-							</ul>
-							<form>
-								<div class="multiselect">
-									<div class="selectBox" onclick="showCheckboxes3()">
-										<select>
-											<option>Select an option</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-									<div id="checkboxes3">
-										<label for="sixteen">
-											<input type="checkbox" name="party" id="sixteen" class="checks" value="Finger Food" data-price="48.00" />Selection of Finger Food, made to order, for more information see label dropdown, €48 serves 8</label>
-										<label for="seventeen">
-											<input type="checkbox" name="party" id="seventeen" class="checks" value="Sandwiches" data-price="36.00" />Tasty Sandwiches, made to order €4.50 per person min 8 people</label>
-										<label for="eighteen">
-											<input type="checkbox" name="party" id="eighteen" class="checks" value="Platter" data-price="48.00"/>Platters - Wedges, Cocktail Sausages, Chicken Goujons - €48 serves 8</label>
-									</div>
-								</div> <!--closing div for multiselect-->
-							</form>	
-						</div> <!--closing div for button grp-->
-					</div> <!--closing party div-->
-				</div><!--closing div for col-->
-			</div><!--closing div for row-->
-			<div class="row">
-				<div class="col-sm-6">	
-					<div class="deserts">
-						<div class="btn-group">
-							<button type="button" class="btn btn-primary custom-btn"> Deserts </button>
-							<form>
-								<div class="multiselect">
-									<div class="selectBox" onclick="showCheckboxes4()">
-										<select>
-											<option>Select an option</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-									<div id="checkboxes4">
-										<label for="nineteen">
-											<input type="checkbox" name="deserts" id="nineteen" class="checks" value="Christmas Pudding" data-price="25.00" />Luxury Handmade Christmas Pudding €25</label>
-										<label for="twenty">
-											<input type="checkbox" name="deserts" id="twenty" class="checks" value="Mini Meringues" data-price="20.00"/>Mini Meringues with Strawberries and Cream €20</label>
-										<label for="twentyone">
-											<input type="checkbox" name="deserts" id="twentyone" class="checks" value="Chocolate Cake" data-price="25.00" />Triple Layered Chocolate Cake €25</label>
-										<label for="twentytwo">
-											<input type="checkbox" name="deserts" id="twentytwo" class="checks" value="Mince Pies" data-price="20.00" />Mince Pies Box of 12</label>
-										<label for="twentythree">
-											<input type="checkbox" name="deserts" id="twentythree" class="checks" value="Cheeseboard" data-price="30.00" />Sheridans Cheeseboard, selection of cheeses, crackers and port and plum chutney €30</label>
-									</div> <!--closing checkboxes div-->
-								</div> <!--closing multiselect div-->
-							</form>				
-						</div><!--closing btn-grp div -->
-					</div> <!--closing deserts div-->
-				</div><!--closing div for col-->
-				<div class="col-sm-6">	
-					<div class="tableware">
-						<div class="btn-group">
-							<button type="button" class="btn btn-primary custom-btn"> Table Wares </button>
-							<button type="button" class="btn btn-primary custom-btn dropdown-toggle" data-toggle="dropdown">
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li>We have teamed up with local crafts people, to give you that extra touch of luxury, if you would like us to dress your Table.</li> 
-								<li>We have the following available:</li>
-								<li role="presentation">Table Cloth and Napkins</li>
-								<li role="presentation">Serving Dishes</li>
-								<li role="presentation">Full Dinner Set incl Cutlery for 8</li>
-								<li role="presentation">Wine Glasses & Champagne Flutes</li>
-								<li role="presentation">High-ball glasses</li>
-								<li role="presentation">Tea/Coffee Cups and Saucers</li>
-								<li role="presentation">Candles</li>
-								<li role="presentation" class="divider"></li>
-								<li>If you would like to pick from either of the options across we can organise rental for your special day.</li>
-								<li> All are available to purchase from our Partners. Please see Gallery and Links page for the list of our Suppliers</li>
-							</ul>
-							<form>
-								<div class="multiselect">
-									<div class="selectBox" onclick="showCheckboxes5()">
-										<select>
-											<option>Select an option</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-									<div id="checkboxes5">
-										<label for="twentyfour">
-											<input type="checkbox" name="tableware" id="twentyfour" class="checks" value="Full Setting" data-price="80.00"/>Dress the whole table €80.00</label>
-										<label for="twentyfive">
-											<input type="checkbox" name="tableware" id="twentyfive" class="checks" value="Plates" data-price="30.00" />Serving Dishes, plates and Cutlery €30.00</label>
-									</div> <!--closing div for checkboxes-->
-								</div> <!--closing div for multiselect-->
-							</form>	
-						</div> <!--closing div btn-grp -->
-					</div> <!--closing div for tablewares -->
-				</div><!--closing div for col-->
-			</div><!--closing div for row-->
-			<div class="row">
-				<div class="col-sm-12">	
-					<div class="schedule">
-						<input type="checkbox" name="delivery" class="checks" value="delivery" data-price="25.00" onclick="alert('Please select your Delivery Date and Time');"/>Delivery €25.00<br />
-						<input type="checkbox" name="delivery" class="checks" value="collection" data-price="0.00" onclick="alert('Please select your Collection Date and Time');"/>Collection (by appointment) (free)<br />
-				
-						<p class="heading">Total Cost of Order</p>				
-						<h4>Total €<span id="tots">0.00</span></h4>
-				
-						<form>
-							<label>Please choose prefered Delivery or Collection, date and Time</label>
-								<input type="date" min="2020-12-01" max="2021-01-02">
-								<input type="time" value="08:00" step="1800"><br />
-						
-							<p><b> Please Note:</b></p>
-							<p>We will try to schedule your delivery as close to your prefered time as possible.</p>
-						</form>
-					</div> <!--closing schedule div -->
-					<div id="place">
-						<form style="display: inline" action="info.html" method="get">
-							<button>Click to Place your Order</button>
-						</form>
-						
-					</div>
-				</div> <!--closing col div -->
-			</div> <!--closing row div -->
-			<div id="footer">
-				<p>Meal Catering and Supplies, Main Street, Swords, Co. Dublin  Tel No: 01 8592100, Email: info@mealcatering.ie</p>
-				<img src="img/social.jpg" alt="socialmedia"> Find out more about us
-			</div> <!--closing div footer-->
-		</div>	<!--closing container div-->	
-							
-		<script src="menucal.js"></script>
-	</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--sets the width of the page to follow the screen width of the device-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light navbar-custom"
+      id="navBar"
+    >
+      <img src="images/LogoMakr-3wMLsH.png" alt="Meal Logo" id="logo" />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link links" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link links" href="info.html">About Us </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Menu
+            </a>
+            <div class="dropdown-menu links" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item links" href="menu.html"
+                >Order<span class="sr-only">(current)</span></a
+              >
+              <a class="dropdown-item links" href="checkout.html">Checkout</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html" tabindex="-1">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="wrapper">
+            <div class="head">
+              <img src="logo.png" alt="logo" />
+              <h1>Menus</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="mains">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary custom-btn">
+                Christmas Dinner - Mains
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary custom-btn dropdown-toggle"
+                data-toggle="dropdown"
+              >
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li>Free Range Bronze Turkey</li>
+                <li>Honey & Mustard Glazed Ham</li>
+                <li>Duck Fat Roasted Potatoes</li>
+                <li>Roasted Parsnip and Carrots</li>
+                <li>Brussels Sprouts with Bacon</li>
+                <li>Sage and Onion Stuffing</li>
+                <li>Traditional Gravy</li>
+              </ul>
+              <form>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes()">
+                    <select>
+                      <option>Select an option</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes">
+                    <label for="one">
+                      <input
+                        type="checkbox"
+                        name="mains"
+                        id="one"
+                        class="checks"
+                        value="Family Dinner"
+                        data-price="230.00"
+                      />
+                      Serves 8-10 people €230.00)</label
+                    >
+                    <label for="two">
+                      <input
+                        type="checkbox"
+                        name="mains"
+                        id="two"
+                        class="checks"
+                        value="Dinner for Couple"
+                        data-price="100.00"
+                      />Serves 2-3 people €100.00)</label
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--closing col div-->
+        <div class="col-sm-6">
+          <div class="sides">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary custom-btn">
+                Christmas Dinner - Sides
+              </button>
+              <form>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes1()">
+                    <select>
+                      <option>Select an option</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes1">
+                    <label for="three">
+                      <input
+                        type="checkbox"
+                        name="sides"
+                        id="three"
+                        class="checks"
+                        value="Cranberry Sauce"
+                        data-price="3.50"
+                      />Homemade Cranberry Sauce - €3.50 serves 8</label
+                    >
+                    <label for="four">
+                      <input
+                        type="checkbox"
+                        name="sides"
+                        id="four"
+                        class="checks"
+                        value="Bread Sauce"
+                        data-price="3.50"
+                      />Homemade Bread Sauce €3.50 serves 8</label
+                    >
+                    <label for="five">
+                      <input
+                        type="checkbox"
+                        name="sides"
+                        id="five"
+                        class="checks"
+                        value="Smoked Salmon"
+                        data-price="25.00"
+                      />Smoked Salmon and Homemade Brown Soda Bread - €25 serves
+                      8</label
+                    >
+                    <label for="six">
+                      <input
+                        type="checkbox"
+                        name="sides"
+                        id="six"
+                        class="checks"
+                        value="Prawn Cocktail"
+                        data-price="20.00"
+                      />Prawn Cocktail - €20 serves 8</label
+                    >
+                  </div>
+                  <!--closing div for checkboxes1-->
+                </div>
+                <!--closing div for multiselect-->
+              </form>
+            </div>
+            <!--closing div for button grp-->
+          </div>
+          <!--closing div for sides-->
+        </div>
+        <!--closing div for col-->
+      </div>
+      <!--closing div for row-->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="family">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary custom-btn">
+                Family Gatherings
+              </button>
+              <form>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes2()">
+                    <select>
+                      <option>Select an option</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes2">
+                    <label for="seven">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="seven"
+                        class="checks"
+                        value="Beef Lasagne"
+                        data-price="48.00"
+                      />Homemade Beef Serves 8 €48</label
+                    >
+                    <label for="eight">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="eight"
+                        class="checks"
+                        value="Vegetarian Lasagne"
+                        data-price="48.00"
+                      />Homemade Vegetarian Lasagne Serves 8 €48</label
+                    >
+                    <label for="nine">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="nine"
+                        class="checks"
+                        value="Beef Staganoff"
+                        data-price="48.00"
+                      />Beef Staganoff Serves 8 €48</label
+                    >
+                    <label for="ten">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="ten"
+                        class="checks"
+                        value="Chicken Curry"
+                        data-price="48.00"
+                      />Chicken Curry Serves 8 €48</label
+                    >
+                    <label for="eleven">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="eleven"
+                        class="checks"
+                        value="Platter"
+                        data-price="18.00"
+                      />Party Favourites Platter - Wedges, Cocktail Sausages,
+                      Chicken Goujons Serves 8 €48</label
+                    >
+                    <label for="twelve">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="twelve"
+                        class="checks"
+                        value="Rice"
+                        data-price="18.00"
+                      />Boiled Rice - Serves 8 €18</label
+                    >
+                    <label for="thirteen">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="thirteen"
+                        class="checks"
+                        value="Potato Mash"
+                        data-price="15.00"
+                      />Potato Mash - Serves 8 €15</label
+                    >
+                    <label for="fourteen">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="fourteen"
+                        class="checks"
+                        value="Potato Wedges"
+                        data-price="20.00"
+                      />Potato Wedges - Serves 8 €20</label
+                    >
+                    <label for="fifteen">
+                      <input
+                        type="checkbox"
+                        name="family"
+                        id="fifteen"
+                        class="checks"
+                        value="Salad"
+                        data-price="18.00"
+                      />Freshly Chopped Salad Leaves with Peppers, Tomato,
+                      Cucumber and Onion - Tray serves 8 - €18</label
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--closing div for button grp-->
+          </div>
+          <!--closing div for family-->
+        </div>
+        <!--closing div for col-->
+        <div class="col-sm-6">
+          <div class="party">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary custom-btn">
+                Parties and Events
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary custom-btn dropdown-toggle"
+                data-toggle="dropdown"
+              >
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li>For parties and Events see also Family Gatherings</li>
+                <li>
+                  Our Finger Food selection can include: French Fries, Chicken
+                  Wings in BBQ Sauce, Mini Quiches, Mini Beef or Chicken
+                  sliders, Pulled Port, Stuffed Mushrooms, or Chicken and
+                  Mushroom vol-au-vents.
+                </li>
+                <li>
+                  We also have a wonderful selection of vegetarian options
+                </li>
+                <li>
+                  Please contact us for more information. We are happy to cater
+                  for all events big and small, along with any special requests.
+                </li>
+              </ul>
+              <form>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes3()">
+                    <select>
+                      <option>Select an option</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes3">
+                    <label for="sixteen">
+                      <input
+                        type="checkbox"
+                        name="party"
+                        id="sixteen"
+                        class="checks"
+                        value="Finger Food"
+                        data-price="48.00"
+                      />Selection of Finger Food, made to order, for more
+                      information see label dropdown, €48 serves 8</label
+                    >
+                    <label for="seventeen">
+                      <input
+                        type="checkbox"
+                        name="party"
+                        id="seventeen"
+                        class="checks"
+                        value="Sandwiches"
+                        data-price="36.00"
+                      />Tasty Sandwiches, made to order €4.50 per person min 8
+                      people</label
+                    >
+                    <label for="eighteen">
+                      <input
+                        type="checkbox"
+                        name="party"
+                        id="eighteen"
+                        class="checks"
+                        value="Platter"
+                        data-price="48.00"
+                      />Platters - Wedges, Cocktail Sausages, Chicken Goujons -
+                      €48 serves 8</label
+                    >
+                  </div>
+                </div>
+                <!--closing div for multiselect-->
+              </form>
+            </div>
+            <!--closing div for button grp-->
+          </div>
+          <!--closing party div-->
+        </div>
+        <!--closing div for col-->
+      </div>
+      <!--closing div for row-->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="deserts">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary custom-btn">
+                Deserts
+              </button>
+              <form>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes4()">
+                    <select>
+                      <option>Select an option</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes4">
+                    <label for="nineteen">
+                      <input
+                        type="checkbox"
+                        name="deserts"
+                        id="nineteen"
+                        class="checks"
+                        value="Christmas Pudding"
+                        data-price="25.00"
+                      />Luxury Handmade Christmas Pudding €25</label
+                    >
+                    <label for="twenty">
+                      <input
+                        type="checkbox"
+                        name="deserts"
+                        id="twenty"
+                        class="checks"
+                        value="Mini Meringues"
+                        data-price="20.00"
+                      />Mini Meringues with Strawberries and Cream €20</label
+                    >
+                    <label for="twentyone">
+                      <input
+                        type="checkbox"
+                        name="deserts"
+                        id="twentyone"
+                        class="checks"
+                        value="Chocolate Cake"
+                        data-price="25.00"
+                      />Triple Layered Chocolate Cake €25</label
+                    >
+                    <label for="twentytwo">
+                      <input
+                        type="checkbox"
+                        name="deserts"
+                        id="twentytwo"
+                        class="checks"
+                        value="Mince Pies"
+                        data-price="20.00"
+                      />Mince Pies Box of 12</label
+                    >
+                    <label for="twentythree">
+                      <input
+                        type="checkbox"
+                        name="deserts"
+                        id="twentythree"
+                        class="checks"
+                        value="Cheeseboard"
+                        data-price="30.00"
+                      />Sheridans Cheeseboard, selection of cheeses, crackers
+                      and port and plum chutney €30</label
+                    >
+                  </div>
+                  <!--closing checkboxes div-->
+                </div>
+                <!--closing multiselect div-->
+              </form>
+            </div>
+            <!--closing btn-grp div -->
+          </div>
+          <!--closing deserts div-->
+        </div>
+        <!--closing div for col-->
+        <div class="col-sm-6">
+          <div class="tableware">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary custom-btn">
+                Table Wares
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary custom-btn dropdown-toggle"
+                data-toggle="dropdown"
+              >
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  We have teamed up with local crafts people, to give you that
+                  extra touch of luxury, if you would like us to dress your
+                  Table.
+                </li>
+                <li>We have the following available:</li>
+                <li role="presentation">Table Cloth and Napkins</li>
+                <li role="presentation">Serving Dishes</li>
+                <li role="presentation">Full Dinner Set incl Cutlery for 8</li>
+                <li role="presentation">Wine Glasses & Champagne Flutes</li>
+                <li role="presentation">High-ball glasses</li>
+                <li role="presentation">Tea/Coffee Cups and Saucers</li>
+                <li role="presentation">Candles</li>
+                <li role="presentation" class="divider"></li>
+                <li>
+                  If you would like to pick from either of the options across we
+                  can organise rental for your special day.
+                </li>
+                <li>
+                  All are available to purchase from our Partners. Please see
+                  Gallery and Links page for the list of our Suppliers
+                </li>
+              </ul>
+              <form>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes5()">
+                    <select>
+                      <option>Select an option</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes5">
+                    <label for="twentyfour">
+                      <input
+                        type="checkbox"
+                        name="tableware"
+                        id="twentyfour"
+                        class="checks"
+                        value="Full Setting"
+                        data-price="80.00"
+                      />Dress the whole table €80.00</label
+                    >
+                    <label for="twentyfive">
+                      <input
+                        type="checkbox"
+                        name="tableware"
+                        id="twentyfive"
+                        class="checks"
+                        value="Plates"
+                        data-price="30.00"
+                      />Serving Dishes, plates and Cutlery €30.00</label
+                    >
+                  </div>
+                  <!--closing div for checkboxes-->
+                </div>
+                <!--closing div for multiselect-->
+              </form>
+            </div>
+            <!--closing div btn-grp -->
+          </div>
+          <!--closing div for tablewares -->
+        </div>
+        <!--closing div for col-->
+      </div>
+      <!--closing div for row-->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="schedule">
+            <input
+              type="checkbox"
+              name="delivery"
+              class="checks"
+              value="delivery"
+              data-price="25.00"
+              onclick="alert('Please select your Delivery Date and Time');"
+            />Delivery €25.00<br />
+            <input
+              type="checkbox"
+              name="delivery"
+              class="checks"
+              value="collection"
+              data-price="0.00"
+              onclick="alert('Please select your Collection Date and Time');"
+            />Collection (by appointment) (free)<br />
+
+            <p class="heading">Total Cost of Order</p>
+            <h4>Total €<span id="tots">0.00</span></h4>
+
+            <form>
+              <label
+                >Please choose prefered Delivery or Collection, date and
+                Time</label
+              >
+              <input type="date" min="2020-12-01" max="2021-01-02" />
+              <input type="time" value="08:00" step="1800" /><br />
+
+              <p><b> Please Note:</b></p>
+              <p>
+                We will try to schedule your delivery as close to your prefered
+                time as possible.
+              </p>
+            </form>
+          </div>
+          <!--closing schedule div -->
+          <div id="place">
+            <form style="display: inline" action="info.html" method="get">
+              <button>Click to Place your Order</button>
+            </form>
+          </div>
+        </div>
+        <!--closing col div -->
+      </div>
+      <!--closing row div -->
+      <div id="footer">
+        <p>
+          Meal Catering and Supplies, Main Street, Swords, Co. Dublin Tel No: 01
+          8592100, Email: info@mealcatering.ie
+        </p>
+        <img src="img/social.jpg" alt="socialmedia" /> Find out more about us
+      </div>
+      <!--closing div footer-->
+    </div>
+    <!--closing container div-->
+
+    <script src="menucal.js"></script>
+  </body>
 </html>
