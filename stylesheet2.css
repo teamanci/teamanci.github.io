@@ -46,13 +46,6 @@
   padding: 20px;
   margin-left: 5%;
 }
-.total {
-  background-image: url("images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
-  background-size: cover;
-  border-style: solid;
-  padding: 20px;
-  min-width: 200px;
-}
 .footer {
   line-height: 20px;
   background-color: #dfc7c1;
@@ -157,4 +150,24 @@ body {
 }
 .dropdown {
   margin-top: 5px;
+}
+.checkout {
+  justify-content: space-evenly;
+  background-image: url("images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
+  background-size: cover;
+  padding: 20px;
+  min-width: 200px;
+}
+.christmasTree {
+  animation: sway1 16s infinite;
+  transform-origin: 50% 100% 0;
+}
+@keyframes sway1 {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
 }

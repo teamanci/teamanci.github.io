@@ -102,7 +102,7 @@
 
   <div class="heading">Checkout</div>
   <div class="row">
-    <div class="col-7 form">
+    <div class="col-5 form">
       <div class="row">
         <div id="details">Account Details</div>
       </div>
@@ -205,62 +205,60 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4 total">
-      <div class="paymentSummary">
-        <div class="cards">
-          <h5>Payment</h5>
-          <label>Visa</label>
-          <input type="radio" id="visa" name="checkbox" value="check" />
-          <label>MasterCard</label>
-          <input type="radio" id="masterCard" name="checkbox" value="check" />
-        </div>
-        <div class="currency">
-          <h5>Currency</h5>
-          <label>Euro &euro; </label>
-          <input
-            type="radio"
-            id="euro"
-            name="radio"
-            value="check"
-            onchange="totalPayable();"
-          />
-          <label>Pounds &pound; </label>
-          <input
-            type="radio"
-            id="pounds"
-            name="radio"
-            value="check"
-            onchange="totalPayable();"
-          />
-        </div>
-      </div>
-      <div class="splitBorder"></div>
-      <h5>Total</h5>
-      <div class="row payment">
-        <div id="total"></div>
+    <div class="col-sm-5">
+      <div class="row checkout total">
+        <div>
+          <div class="paymentSummary">
+            <div class="cards">
+              <h5>Payment</h5>
+              <label>Visa</label>
+              <input type="radio" id="visa" name="checkbox" value="check" />
+              <label>MasterCard</label>
+              <input
+                type="radio"
+                id="masterCard"
+                name="checkbox"
+                value="check"
+              />
+            </div>
+            <div class="currency">
+              <h5>Currency</h5>
+              <label>Euro &euro; </label>
+              <input
+                type="radio"
+                id="euro"
+                name="radio"
+                value="check"
+                onchange="totalPayable();"
+              />
+              <label>Pounds &pound; </label>
+              <input
+                type="radio"
+                id="pounds"
+                name="radio"
+                value="check"
+                onchange="totalPayable();"
+              />
+            </div>
+          </div>
+          <div class="splitBorder"></div>
+          <h5>Total</h5>
+          <div class="row payment">
+            <div id="total"></div>
 
-        <input
-          type="image"
-          id="button"
-          name="submit"
-          src="images/checkmark.png"
-          value="check"
-        />
+            <input
+              type="image"
+              id="button"
+              name="submit"
+              src="images/checkmark.png"
+              value="check"
+            />
+          </div>
+        </div>
+        <div class="text-center christmasTree">
+          <img src="images/Background (1).png" alt="Christmas Tree" />
+        </div>
       </div>
     </div>
   </div>
-  <!-- <div class="footer">
-    <div class="footerContent row">
-      <div class="col-sm-1">
-        <img src="images/visa.jpg" alt="visa" id="visa2" />
-      </div>
-      <div class="col-sm-1">
-        <img
-          src="images/logo-mastercard-mobile.svg"
-          alt="mastercard"
-          id="mastercard"
-        />
-      </div>
-    </div>
-  </div> -->
 </body>
