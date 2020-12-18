@@ -12,6 +12,12 @@
 	margin-bottom: 20px;
 }
 
+.navbar-custom {
+  font-family: "Averia Serif Libre";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 .head img {
   float: left;
   width: 200px;
