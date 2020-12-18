@@ -1,0 +1,110 @@
+.container{
+	color: #1b2f41;
+	font-family: Arial, sans-serif;
+	height: 100%;
+}
+
+.head {
+	background:#1b2f41;
+	height: 20%;
+	width:100%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.head img {
+  float: left;
+  width: 200px;
+  height: 50px;
+}
+
+.head h1{
+	position: relative;
+	color:white;
+	text-align: center;
+}
+
+body{
+	background-image: url('img/207.jpg');
+	position: relative;
+	height: 75%;
+	width: 100%;
+}
+
+.btn-primary.custom-btn {
+	background-color: #1b2f41;
+	border-color: white;
+	border-bottom-width: 10px;
+	font-size: 22px;
+}
+.dropdown-toggle{
+	background-color: white;
+	border-color: white;
+	border-bottom-width: 10px;
+	font-size: 22px;
+}
+
+
+.multiselect {
+  width: 200px;
+  background-color: white;
+}
+
+.selectBox {
+  position: relative;
+  
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes, #checkboxes1, #checkboxes2, #checkboxes3, #checkboxes4, #checkboxes5{
+  display: none;
+  border: 1px #dadada solid;
+}
+
+
+#checkboxes label, #checkboxes1 label, #checkboxes2 label, #checkboxes3 label, #checkboxes4 label, #checkboxes5 label {
+  display: block;
+}
+
+
+#checkboxes label:hover, #checkboxes1 label:hover, #checkboxes2 label:hover, #checkboxes3 label:hover, #checkboxes4 label:hover, #checkboxes5 label:hover {
+  background-color: #fde7e9;;
+}
+
+
+#place{
+	color: white;
+	padding: 12px 20px;
+	margin: 8px;
+	cursor: pointer;
+	float: right;
+}
+
+#footer{
+	position: relative; 
+	padding: 10px 10px 0px 10px; 
+    bottom: 0; 
+	width: 100%; 
+	height: 15%;
+	font-size: 12px;
+	text-align: center;
+	background-color: #f67280;
+	color: white;
+}
+
+#footer img {
+  width: 80px;
+  height: 20px;
+}
