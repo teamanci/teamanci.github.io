@@ -3,6 +3,9 @@
   height: auto;
   padding: 10px;
 }
+.wrapper {
+  justify-content: center;
+}
 .navbar-custom {
   font-family: "Averia Serif Libre";
   font-weight: bold;
@@ -151,9 +154,13 @@ body {
 .dropdown {
   margin-top: 5px;
 }
-/* .heading {
+#hideCheckout {
   display: none;
-} */
+  font-family: Averia Serif Libre;
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+}
 .checkout {
   justify-content: space-evenly;
   background-image: url("images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
