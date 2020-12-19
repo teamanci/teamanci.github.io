@@ -17,7 +17,7 @@
   font-family: "Averia Serif Libre";
 }
 .banner {
-  background-image: url("images/christmasBanner.jpg");
+  background-image: url("../images/christmasBanner.jpg");
   width: 100%;
   background-size: cover;
   padding-top: 100px;
@@ -184,7 +184,7 @@ body {
 }
 .checkout {
   justify-content: space-evenly;
-  background-image: url("images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
+  background-image: url("../images/Simple-Cute-Christmas-iPhone-Wallpapers-Top-Free-Simple-.jpg");
   background-size: cover;
   padding: 20px;
   min-width: 200px;

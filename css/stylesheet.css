@@ -4,7 +4,7 @@
   padding: 10px;
 }
 .banner {
-  background-image: url("images/christmasBanner.jpg");
+  background-image: url("../images/christmasBanner.jpg");
   background-size: cover;
   color: rgb(255, 255, 255);
   padding-top: 100px;
