@@ -191,6 +191,7 @@
                 <li><a class="dropdown-item">Connacht</a></li>
               </ul>
             </div>
+            <div id="provinceValidation"></div>
           </div>
           <div class="col-sm-4">
             <input
@@ -211,15 +212,23 @@
               <div class="cards">
                 <h5>Payment</h5>
                 <label>Visa</label>
-                <input type="radio" id="visa" name="checkbox" value="check" />
+                <input
+                  type="radio"
+                  id="visa"
+                  name="checkbox"
+                  value="check"
+                  onchange="checkCard();"
+                />
                 <label>MasterCard</label>
                 <input
                   type="radio"
                   id="masterCard"
                   name="checkbox"
                   value="check"
+                  onchange="checkCard();"
                 />
               </div>
+              <div id="cardValidation"></div>
               <div class="currency">
                 <h5>Currency</h5>
                 <label>Euro &euro; </label>
@@ -239,6 +248,7 @@
                   onchange="totalPayable();"
                 />
               </div>
+              <div id="currencyValidation"></div>
             </div>
             <div class="splitBorder"></div>
             <h5>Total</h5>

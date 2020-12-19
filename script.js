@@ -77,7 +77,6 @@ function checkEmail() {
 var isValidateEmail = false;
 function validateEmail() {
   var email = document.getElementById("email").value;
-  console.log(email);
   if (email.indexOf("@") > 0) {
     isValidateEmail = true;
   } else {
