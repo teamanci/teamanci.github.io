@@ -65,22 +65,13 @@ function checkEmail() {
   var valid = "#619196";
   var invalid = "#DFC7C1";
   // Trim removes whitespace
-  if (email.value.trim().length > 0) {
+  if (email.value.indexOf("@") > 0) {
     isEmailValid = true;
     email.style.backgroundColor = valid;
   } else {
     isEmailValid = false;
     email.style.backgroundColor = invalid;
     return;
-  }
-}
-var isValidateEmail = false;
-function validateEmail() {
-  var email = document.getElementById("email").value;
-  if (email.indexOf("@") > 0) {
-    isValidateEmail = true;
-  } else {
-    isValidateEmail = false;
   }
 }
 function animateRotate() {
@@ -100,13 +91,8 @@ function animateRotate() {
 function submitForm() {
   termsValidation();
   checkEmail();
-  validateEmail();
   animateRotate();
-  if (
-    isEmailValid == true &&
-    isCheckboxChecked == true &&
-    isValidateEmail == true
-  ) {
+  if (isEmailValid == true && isCheckboxChecked == true) {
     $("#email").blur();
     $("#hideFooter").hide();
     $("#heading2").show();
