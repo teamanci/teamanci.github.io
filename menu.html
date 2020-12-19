@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
 
     <link rel="stylesheet" href="css/Menustylesheet.css" />
+    <!--link to the style sheet-->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Averia Serif Libre"
@@ -32,6 +33,7 @@
       class="navbar navbar-expand-lg navbar-light bg-light navbar-custom"
       id="navBar"
     >
+      <!--navigation bar and logo, added for website deployment-->
       <img src="images/LogoMakr-3wMLsH.png" alt="Meal Logo" id="logo" />
       <button
         class="navbar-toggler"
@@ -79,30 +81,42 @@
       </div>
     </nav>
     <div class="container">
+      <!--container created for Responsive Web Design-->
       <div class="row">
         <div class="col-sm-12">
+          <!--full width for RWD column-->
           <div class="wrapper">
             <div class="head">
+              <!--header div-->
               <h1>Menus</h1>
             </div>
+            <!--closing header div-->
           </div>
+          <!--closing wrapper div-->
         </div>
+        <!--closing col-->
       </div>
+      <!--closing row-->
       <div class="row">
+        <!--new row-->
         <div class="col-sm-6">
+          <!--half width for RWD-->
           <div class="mains">
             <div class="btn-group">
               <button type="button" class="btn btn-primary custom-btn">
                 Christmas Dinner - Mains
               </button>
+              <!--Christmas Dinner Bootstrap button-->
               <button
                 type="button"
                 class="btn btn-primary custom-btn dropdown-toggle"
                 data-toggle="dropdown"
               >
+                <!--dropdown botton on the Christmas mains button-->
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
+                <!--list of foods in the Christmas mains dropdown-->
                 <li>Free Range Bronze Turkey</li>
                 <li>Honey & Mustard Glazed Ham</li>
                 <li>Duck Fat Roasted Potatoes</li>
@@ -112,13 +126,17 @@
                 <li>Traditional Gravy</li>
               </ul>
               <form>
+                <!--new form-->
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes()">
+                    <!-- creates empty select box with text, to select. Also calling on the javascript to run, which changes display tp expand-->
                     <select>
                       <option>Select an option</option>
                     </select>
                     <div class="overSelect"></div>
+                    <!--overlap empty selectbox with checkbox options, css used for overlap-->
                   </div>
+                  <!--closing div for selectbox-->
                   <div id="checkboxes">
                     <label for="one">
                       <input
@@ -128,9 +146,8 @@
                         class="checks"
                         value="Family Dinner"
                         data-price="230.00"
-                      />
-                      Serves 8-10 people €230.00)</label
-                    >
+                      />Serves 8-10 people €230.00)</label
+                    ><!--checkbox for family dinner-->
                     <label for="two">
                       <input
                         type="checkbox"
@@ -140,28 +157,39 @@
                         value="Dinner for Couple"
                         data-price="100.00"
                       />Serves 2-3 people €100.00)</label
-                    >
+                    ><!--checkbox for couples dinner-->
                   </div>
+                  <!--closing div for checkboxes-->
                 </div>
+                <!--closing div for multiselect-->
               </form>
+              <!--closing form tag-->
             </div>
+            <!--closing btn-grp div-->
           </div>
+          <!--closing mains div-->
         </div>
         <!--closing col div-->
         <div class="col-sm-6">
+          <!--half width for RWD column-->
           <div class="sides">
             <div class="btn-group">
               <button type="button" class="btn btn-primary custom-btn">
                 Christmas Dinner - Sides
               </button>
+              <!--button for Christmas dinner sides-->
               <form>
+                <!-- new form-->
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes1()">
+                    <!-- creates empty select box with text, to select. Also calling on the javascript to run, which changes display tp expand-->
                     <select>
                       <option>Select an option</option>
                     </select>
                     <div class="overSelect"></div>
+                    <!--overlap empty selectbox with checkbox options, css used for overlap-->
                   </div>
+                  <!--closing div for selectbox-->
                   <div id="checkboxes1">
                     <label for="three">
                       <input
@@ -209,6 +237,7 @@
                 </div>
                 <!--closing div for multiselect-->
               </form>
+              <!--closing form-->
             </div>
             <!--closing div for button grp-->
           </div>
@@ -219,6 +248,7 @@
       <!--closing div for row-->
       <div class="row">
         <div class="col-sm-6">
+          <!--half width for RWD column-->
           <div class="family">
             <div class="btn-group">
               <button type="button" class="btn btn-primary custom-btn">
@@ -227,11 +257,14 @@
               <form>
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes2()">
+                    <!-- creates empty select box with text, to select. Also calling on the javascript to run, which changes display tp expand-->
                     <select>
                       <option>Select an option</option>
                     </select>
                     <div class="overSelect"></div>
+                    <!--overlap empty selectbox with checkbox options, css used for overlap-->
                   </div>
+                  <!--closing div for selectbox-->
                   <div id="checkboxes2">
                     <label for="seven">
                       <input
@@ -326,8 +359,11 @@
                       Cucumber and Onion - Tray serves 8 - €18</label
                     >
                   </div>
+                  <!--closing div for checkboxes 2-->
                 </div>
+                <!--closing div for mulitselect-->
               </form>
+              <!--closing form-->
             </div>
             <!--closing div for button grp-->
           </div>
@@ -335,6 +371,7 @@
         </div>
         <!--closing div for col-->
         <div class="col-sm-6">
+          <!--half width for RWD column-->
           <div class="party">
             <div class="btn-group">
               <button type="button" class="btn btn-primary custom-btn">
@@ -348,6 +385,7 @@
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
+                <!--dropdown list beside button for Parties and Events information-->
                 <li>For parties and Events see also Family Gatherings</li>
                 <li>
                   Our Finger Food selection can include: French Fries, Chicken
@@ -364,12 +402,15 @@
                 </li>
               </ul>
               <form>
+                <!--new form-->
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes3()">
+                    <!-- creates empty select box with text, to select. Also calling on the javascript to run, which changes display tp expand-->
                     <select>
                       <option>Select an option</option>
                     </select>
                     <div class="overSelect"></div>
+                    <!--overlap empty selectbox with checkbox options, css used for overlap-->
                   </div>
                   <div id="checkboxes3">
                     <label for="sixteen">
@@ -406,9 +447,11 @@
                       €48 serves 8</label
                     >
                   </div>
+                  <!--closing checkboxes3-->
                 </div>
                 <!--closing div for multiselect-->
               </form>
+              <!--closing form-->
             </div>
             <!--closing div for button grp-->
           </div>
@@ -418,7 +461,9 @@
       </div>
       <!--closing div for row-->
       <div class="row">
+        <!--new row-->
         <div class="col-sm-6">
+          <!--half width for RWD column-->
           <div class="deserts">
             <div class="btn-group">
               <button type="button" class="btn btn-primary custom-btn">
@@ -427,10 +472,12 @@
               <form>
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes4()">
+                    <!-- creates empty select box with text, to select. Also calling on the javascript to run, which changes display tp expand-->
                     <select>
                       <option>Select an option</option>
                     </select>
                     <div class="overSelect"></div>
+                    <!--overlap empty selectbox with checkbox options, css used for overlap-->
                   </div>
                   <div id="checkboxes4">
                     <label for="nineteen">
@@ -489,6 +536,7 @@
                 </div>
                 <!--closing multiselect div-->
               </form>
+              <!--closing form-->
             </div>
             <!--closing btn-grp div -->
           </div>
@@ -496,16 +544,19 @@
         </div>
         <!--closing div for col-->
         <div class="col-sm-6">
+          <!--half width for RWD column-->
           <div class="tableware">
             <div class="btn-group">
               <button type="button" class="btn btn-primary custom-btn">
                 Table Wares
               </button>
+              <!--tablewares button-->
               <button
                 type="button"
                 class="btn btn-primary custom-btn dropdown-toggle"
                 data-toggle="dropdown"
               >
+                <!--dropdown beside button for tableware information-->
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
@@ -533,13 +584,17 @@
                 </li>
               </ul>
               <form>
+                <!--new form-->
                 <div class="multiselect">
                   <div class="selectBox" onclick="showCheckboxes5()">
+                    <!-- creates empty select box with text, to select. Also calling on the javascript to run, which changes display tp expand-->
                     <select>
                       <option>Select an option</option>
                     </select>
                     <div class="overSelect"></div>
+                    <!--overlap empty selectbox with checkbox options, css used for overlap-->
                   </div>
+                  <!--closing div for selectbox-->
                   <div id="checkboxes5">
                     <label for="twentyfour">
                       <input
@@ -566,6 +621,7 @@
                 </div>
                 <!--closing div for multiselect-->
               </form>
+              <!--closing form-->
             </div>
             <!--closing div btn-grp -->
           </div>
@@ -575,8 +631,11 @@
       </div>
       <!--closing div for row-->
       <div class="row">
+        <!--new row-->
         <div class="col-sm-12">
+          <!--full width for RWD-->
           <div class="schedule">
+            <!--div for delivery/collection options-->
             <input
               type="checkbox"
               name="delivery"
@@ -596,6 +655,7 @@
 
             <p class="heading">Total Cost of Order</p>
             <h4>Total €<span id="tots">0.00</span></h4>
+            <!--displaying calculated total-->
 
             <form>
               <label
@@ -603,8 +663,9 @@
                 Time</label
               >
               <input type="date" min="2020-12-01" max="2021-01-02" />
+              <!--date input, restricted to 011220 to 020121-->
               <input type="time" value="08:00" step="1800" /><br />
-
+              <!--time option starting from 8am-->
               <p><b> Please Note:</b></p>
               <p>
                 We will try to schedule your delivery as close to your prefered
@@ -615,17 +676,19 @@
           <!--closing schedule div -->
           <div id="place">
             <form style="display: inline" action="checkout.html" method="get">
+              <!--pointing to checkout page onclick-->
               <button>Click to Place your Order</button>
             </form>
           </div>
+          <!--closing place div-->
         </div>
         <!--closing col div -->
       </div>
       <!--closing row div -->
       <div id="footer">
         <p>
-          Meal Catering and Supplies, Main Street, Swords, Co. Dublin Tel No: 01
-          8592100, Email: info@mealcatering.ie
+          Meal Catering and Supplies, Main Street, Swords, Co. Dublin Tel No:
+          018592100, Email: info@mealcatering.ie
         </p>
         <img src="images/social.jpg" alt="socialmedia" /> Find out more about us
       </div>
@@ -634,5 +697,7 @@
     <!--closing container div-->
 
     <script src="JavaScript/menucal.js"></script>
+    <!--link to javascript-->
   </body>
+  <!--closing body tag-->
 </html>

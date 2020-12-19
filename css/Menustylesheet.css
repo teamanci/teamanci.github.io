@@ -1,9 +1,10 @@
+/*this is styling for the whole page, including size and font*/
 .container {
   color: #1b2f41;
   font-family: Arial, sans-serif;
   height: 100%;
 }
-
+/*styling for the header, including size, color, font and position*/
 .head {
   background: #1b2f41;
   height: 20%;
@@ -11,59 +12,60 @@
   float: left;
   margin-bottom: 20px;
 }
-
+/*this is styling for navigation bar, including size and font*/
 .navbar-custom {
   font-family: "Averia Serif Libre";
   font-weight: bold;
   font-size: 1.3em;
 }
-
+/*styling for logo*/
 .head img {
   float: left;
   width: 200px;
   height: 50px;
 }
-
+/*styling for Heading*/
 .head h1 {
   position: relative;
   color: white;
   text-align: center;
 }
-
+/*styling got body*/
 body {
-  background-image: url("../images/207.jpg");
+  background-image: url("../images/207.jpg"); /*link to backgroundphotograph*/
   position: relative;
   height: 75%;
   width: 100%;
 }
-
+/*customised styling for the bootstrap heading buttons*/
 .btn-primary.custom-btn {
   background-color: #1b2f41;
   border-color: white;
   border-bottom-width: 10px;
   font-size: 22px;
 }
+/*customised styling for the bootstrap dropdown*/
 .dropdown-toggle {
   background-color: white;
   border-color: white;
   border-bottom-width: 10px;
   font-size: 22px;
 }
-
+/*styling for dropdown, background and size*/
 .multiselect {
   width: 200px;
   background-color: white;
 }
-
+/*location of selectbox in relation to the title button*/
 .selectBox {
   position: relative;
 }
-
+/*styling for empty selectbox with text*/
 .selectBox select {
   width: 100%;
   font-weight: bold;
 }
-
+/*styling for overlay select box, to position over selectbox with text*/
 .overSelect {
   position: absolute;
   left: 0;
@@ -71,7 +73,7 @@ body {
   top: 0;
   bottom: 0;
 }
-
+/* styling so checkboxes are collapsed*/
 #checkboxes,
 #checkboxes1,
 #checkboxes2,
@@ -81,7 +83,7 @@ body {
   display: none;
   border: 1px #dadada solid;
 }
-
+/*checkboxes are displayed as a block*/
 #checkboxes label,
 #checkboxes1 label,
 #checkboxes2 label,
@@ -90,7 +92,7 @@ body {
 #checkboxes5 label {
   display: block;
 }
-
+/*as mouse hovers over each checkbox option the it goes pink*/
 #checkboxes label:hover,
 #checkboxes1 label:hover,
 #checkboxes2 label:hover,
@@ -99,7 +101,7 @@ body {
 #checkboxes5 label:hover {
   background-color: #fde7e9;
 }
-
+/*styling and location of 'Click to Place your Order button'*/
 #place {
   color: white;
   padding: 12px 20px;
@@ -107,7 +109,7 @@ body {
   cursor: pointer;
   float: right;
 }
-
+/*styling for the footer*/
 #footer {
   position: relative;
   padding: 10px 10px 0px 10px;
@@ -119,7 +121,7 @@ body {
   background-color: #f67280;
   color: white;
 }
-
+/*styling for the social media image*/
 #footer img {
   width: 80px;
   height: 20px;
