@@ -29,18 +29,18 @@
   text-align: center;
 }
 .heading {
-  font-family: Averia Serif Libre;
+  font-family: "Averia Serif Libre";
   font-size: 40px;
   padding: 20px;
 }
 #details {
-  font-family: Averia Serif Libre;
+  font-family: "Averia Serif Libre";
   font-size: 20px;
   padding: 20px;
   margin-top: 20px;
 }
 #deliveryDetails {
-  font-family: Averia Serif Libre;
+  font-family: "Averia Serif Libre";
   font-size: 20px;
   padding: 20px;
   margin-top: 20px;
@@ -129,6 +129,7 @@
 }
 .paymentSummary {
   margin: 10px;
+  font-family: "Averia Serif Libre";
 }
 .cards {
   margin-right: 10px;
@@ -177,7 +178,7 @@ body {
 }
 #hideCheckout {
   display: none;
-  font-family: Averia Serif Libre;
+  font-family: "Averia Serif Libre";
   font-size: 50px;
   padding: 20px;
   text-align: center;
@@ -191,8 +192,9 @@ body {
   overflow: hidden;
   transition: all 0.4s ease-in-out;
 }
+/* Animated a swaying christmas tree via CSS. */
 .christmasTree {
-  animation: sway1 16s infinite;
+  animation: sway1 20s infinite;
   transform-origin: 50% 100% 0;
 }
 @keyframes sway1 {
