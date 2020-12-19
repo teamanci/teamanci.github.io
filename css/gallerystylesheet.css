@@ -1,63 +1,66 @@
+/*this is styling for the whole page, font and colour*/
 .container {
   color: #1b2f41;
   font-family: Arial, sans-serif;
 }
-
+/*styling for the header size and color,*/
 .head {
   background: #1b2f41;
   height: 20%;
   width: 100%;
   margin-bottom: 20px;
 }
-
+/*this is styling for navigation bar, including size and font*/
 .navbar-custom {
   font-family: "Averia Serif Libre";
   font-weight: bold;
   font-size: 1.3em;
 }
-
+/*styling for logo*/
 .head img {
   float: left;
   width: 200px;
   height: 50px;
 }
-
+/*styling for Heading*/
 .head h1 {
   position: relative;
   color: white;
   text-align: center;
 }
+/*styling for body*/
 body {
-  background-image: url("../images/207.jpg");
+  background-image: url("../images/207.jpg"); /*link to backgroundphotograph*/
   position: relative;
   height: 75%;
   width: 100%;
 }
+/*styling for images*/
 .images {
   margin: 10px 30px;
 }
+/*styling for image zoom*/
 .images img {
   transition: width 2s, height 4s;
   padding: 15px;
   width: 200px;
 }
+/*changes when mouse roll over on images*/
 .images img:hover {
   width: 300px;
   height: auto;
 }
-
+/*colour of h5 and h6 headings*/
 h5,
 h6 {
   color: red;
 }
-
+/*font colour for supplier text*/
 .suppliers {
   color: #1b1f5c;
 }
-.suppliers a href {
-  color: white;
-}
 
+/*styling for the footer*/
 #footer {
   position: relative;
   padding: 10px 10px 0px 10px;
@@ -69,7 +72,7 @@ h6 {
   background-color: #f67280;
   color: white;
 }
-
+/*styling for the social media image*/
 #footer img {
   width: 80px;
   height: 20px;
