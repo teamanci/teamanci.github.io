@@ -1,3 +1,4 @@
+// JS page for checkout.html by Áilne Dinneen
 /*Validates First name and Last name input and displays appropriate message.*/
 function checkFirstname() {
   var username = document.getElementById("firstName");

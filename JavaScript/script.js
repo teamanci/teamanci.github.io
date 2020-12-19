@@ -1,3 +1,4 @@
+// JS page for index.html by Áilne Dinneen
 // This interpolates the rotation of the arrow button on the sliding footer
 var buttonValidation = false;
 function animateButton() {
