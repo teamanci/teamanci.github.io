@@ -1,3 +1,4 @@
+// This interpolates
 var buttonValidation = false;
 function animateButton() {
   var $elem = $("#animationButton");
@@ -9,7 +10,6 @@ function animateButton() {
       {
         duration: 400,
         step: function (now) {
-          // var degrees = ((100 - now) / 100) * 180;
           $elem.css({
             transform:
               "translate(0px," +
@@ -31,7 +31,6 @@ function animateButton() {
       {
         duration: 400,
         step: function (now) {
-          // var degrees = ((100 - now) / 100) * 180;
           $elem.css({
             transform:
               "translate(0px," +
@@ -52,8 +51,7 @@ var isCheckboxChecked = false;
 function termsValidation() {
   var $elem = $("#termsConditions");
   if (!$elem.is(":checked")) {
-    // $("#exampleModal").trigger("focus");
-    $("#exampleModal").modal("show");
+    $("#modalTermsConditions").modal("show");
     isCheckboxChecked = false;
   } else {
     isCheckboxChecked = true;
