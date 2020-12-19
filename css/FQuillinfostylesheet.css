@@ -1,9 +1,11 @@
+/*The styling on this page is for the shared css styling on info.html, this css is for FQuill*/
+/*this is styling for the whole page, including size and font*/
 .wrapper {
   background-color: white;
   color: #1b2f41;
   font-family: Arial, sans-serif;
 }
-
+/*styling for the header, including size, color, font and position*/
 .head {
   background: #1b2f41;
   height: 20%;
@@ -11,52 +13,52 @@
   float: left;
   margin-bottom: 20px;
 }
-
+/*this is styling for navigation bar, including size and font*/
 .navbar-custom {
   font-family: "Averia Serif Libre";
   font-weight: bold;
   font-size: 1.3em;
 }
-
+/*styling for logo*/
 .head img {
   float: left;
   width: 200px;
   height: 50px;
 }
-
+/*styling for Heading*/
 .head h1 {
   position: relative;
   color: white;
   text-align: center;
 }
-
+/*styling got body*/
 body {
   background-image: url("../images/207.jpg");
   position: relative;
   height: 75%;
   width: 100%;
 }
-
+/*this is styling for the laaergy lists*/
 #menus {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
-
+/*styling for the menu headings and data*/
 #menus td,
 #menus th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
+/*every even row has a differnt background colour*/
 #menus tr:nth-child(even) {
   background-color: #fde7e9;
 }
-
+/*when mouse hovers over the row it changes colour*/
 #menus tr:hover {
   background-color: #ddd;
 }
-
+/*styling for the table headings only*/
 #menus th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -64,7 +66,7 @@ body {
   background-color: #1b2f41;
   color: white;
 }
-
+/*styling for the 14 Allergens list*/
 #lists {
   background-color: silver;
   font-size: 12px;
@@ -72,6 +74,7 @@ body {
   margin-bottom: 10px;
   padding: 15px;
 }
+/*styling for the footer, the same as menu and gallery*/
 #footer {
   position: relative;
   padding: 10px 10px 0px 10px;
@@ -83,7 +86,7 @@ body {
   background-color: #f67280;
   color: white;
 }
-
+/*styling for the social media image*/
 #footer img {
   width: 80px;
   height: 20px;
