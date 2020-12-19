@@ -12,14 +12,14 @@
     <link href="stylesheet2.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Averia Serif Libre"
+      href="https://fonts.googleapis.com/css?family=Averia%20Serif%20Libre"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Tangerine"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="formscript.js"></script>
+    <script src="formscript.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -42,228 +42,227 @@
 
     <title>Checkout</title>
   </head>
-</html>
-<body>
-  <nav
-    class="navbar navbar-expand-lg navbar-light bg-light navbar-custom"
-    id="navBar"
-  >
-    <img src="images/LogoMakr-3wMLsH.png" alt="Meal Logo" id="logo" />
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light navbar-custom"
+      id="navBar"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <img src="images/LogoMakr-3wMLsH.png" alt="Meal Logo" id="logo" />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link links" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link links" href="info2.html">About Us</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Menu
-          </a>
-          <div class="dropdown-menu links" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item links" href="menu.html">Order</a>
-            <a class="dropdown-item links" href="checkout.html"
-              >Checkout<span class="sr-only">(current)</span></a
-            >
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html" tabindex="-1">Gallery</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="banner">
-    <div class="image">
-      <img src="images/LogoWhite.png" alt="logo" class="logo" />
-    </div>
-  </div>
-
-  <div class="heading">Checkout</div>
-  <div class="row wrapper">
-    <div class="col-5 form">
-      <div class="row">
-        <div id="details">Account Details</div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="First name"
-            id="firstName"
-            onkeyup="checkFirstname(); return false"
-          />
-          <div id="firstNameValidation"></div>
-        </div>
-        <div class="col-sm-4">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Last name"
-            id="lastName"
-            onkeyup="checkLastname(); return false;"
-          />
-          <div id="lastNameValidation"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-            onkeyup="checkEmail();"
-          />
-          <div id="emailValidation"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div id="deliveryDetails">Delivery Details</div>
-      </div>
-      <div class="row">
-        <div class="col-sm-7">
-          <input
-            type="text"
-            class="form-control"
-            id="address1"
-            placeholder="Address Line 1"
-            onkeyup="checkAddress();"
-          />
-          <div id="addressValidation"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-7">
-          <input
-            type="text"
-            class="form-control"
-            id="address2"
-            placeholder="Address Line 2"
-            onkeyup="checkAddress2();"
-          />
-          <div id="address2Validation"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4 dropdown">
-          <div class="dropdown">
-            <button
-              class="btn btn0 btn-info dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link links" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link links" href="info2.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Province
-              <span class="caret"></span>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-inverse1"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <li><a class="dropdown-item">Munster</a></li>
-              <li><a class="dropdown-item">Leinster</a></li>
-              <li><a class="dropdown-item">Ulster</a></li>
-              <li><a class="dropdown-item">Connacht</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Eircode"
-            id="eircode"
-            onkeyup="checkEircode();"
-          />
-          <div id="eircodeValidation"></div>
-        </div>
+              Menu
+            </a>
+            <div class="dropdown-menu links" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item links" href="menu.html">Order</a>
+              <a class="dropdown-item links" href="checkout.html"
+                >Checkout<span class="sr-only">(current)</span></a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html" tabindex="-1">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="banner">
+      <div class="image">
+        <img src="images/LogoWhite.png" alt="logo" class="logo" />
       </div>
     </div>
-    <div class="col-sm-5">
-      <div class="row checkout total">
-        <div class="shownCheckout">
-          <div class="paymentSummary">
-            <div class="cards">
-              <h5>Payment</h5>
-              <label>Visa</label>
-              <input type="radio" id="visa" name="checkbox" value="check" />
-              <label>MasterCard</label>
-              <input
-                type="radio"
-                id="masterCard"
-                name="checkbox"
-                value="check"
-              />
-            </div>
-            <div class="currency">
-              <h5>Currency</h5>
-              <label>Euro &euro; </label>
-              <input
-                type="radio"
-                id="euro"
-                name="radio"
-                value="check"
-                onchange="totalPayable();"
-              />
-              <label>Pounds &pound; </label>
-              <input
-                type="radio"
-                id="pounds"
-                name="radio"
-                value="check"
-                onchange="totalPayable();"
-              />
-            </div>
-          </div>
-          <div class="splitBorder"></div>
-          <h5>Total</h5>
-          <div class="row payment">
-            <div id="total"></div>
 
+    <div class="heading">Checkout</div>
+    <div class="row wrapper">
+      <div class="col-5 form">
+        <div class="row">
+          <div id="details">Account Details</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
             <input
-              type="image"
-              id="button"
-              name="submit"
-              src="images/checkmark.png"
-              value="check"
-              onclick="submitButton()"
-              ;
+              type="text"
+              class="form-control"
+              placeholder="First name"
+              id="firstName"
+              onkeyup="checkFirstname(); return false"
             />
+            <div id="firstNameValidation"></div>
+          </div>
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last name"
+              id="lastName"
+              onkeyup="checkLastname(); return false;"
+            />
+            <div id="lastNameValidation"></div>
           </div>
         </div>
-        <div id="hideCheckout">
-          Thank You for Ordering with Meal - Happy Holidays!
+        <div class="row">
+          <div class="col-sm-6">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="email"
+              placeholder="Enter email"
+              onkeyup="checkEmail();"
+            />
+            <div id="emailValidation"></div>
+          </div>
         </div>
-        <div class="text-center christmasTree">
-          <img src="images/Background (1).png" alt="Christmas Tree" />
+        <div class="row">
+          <div id="deliveryDetails">Delivery Details</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <input
+              type="text"
+              class="form-control"
+              id="address1"
+              placeholder="Address Line 1"
+              onkeyup="checkAddress();"
+            />
+            <div id="addressValidation"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <input
+              type="text"
+              class="form-control"
+              id="address2"
+              placeholder="Address Line 2"
+              onkeyup="checkAddress2();"
+            />
+            <div id="address2Validation"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 dropdown">
+            <div class="dropdown">
+              <button
+                class="btn btn0 btn-info dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Province
+                <span class="caret"></span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-inverse1"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li><a class="dropdown-item">Munster</a></li>
+                <li><a class="dropdown-item">Leinster</a></li>
+                <li><a class="dropdown-item">Ulster</a></li>
+                <li><a class="dropdown-item">Connacht</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Eircode"
+              id="eircode"
+              onkeyup="checkEircode();"
+            />
+            <div id="eircodeValidation"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="row checkout total">
+          <div class="shownCheckout">
+            <div class="paymentSummary">
+              <div class="cards">
+                <h5>Payment</h5>
+                <label>Visa</label>
+                <input type="radio" id="visa" name="checkbox" value="check" />
+                <label>MasterCard</label>
+                <input
+                  type="radio"
+                  id="masterCard"
+                  name="checkbox"
+                  value="check"
+                />
+              </div>
+              <div class="currency">
+                <h5>Currency</h5>
+                <label>Euro &euro; </label>
+                <input
+                  type="radio"
+                  id="euro"
+                  name="radio"
+                  value="check"
+                  onchange="totalPayable();"
+                />
+                <label>Pounds &pound; </label>
+                <input
+                  type="radio"
+                  id="pounds"
+                  name="radio"
+                  value="check"
+                  onchange="totalPayable();"
+                />
+              </div>
+            </div>
+            <div class="splitBorder"></div>
+            <h5>Total</h5>
+            <div class="row payment">
+              <div id="total"></div>
+
+              <input
+                type="image"
+                alt="Submit Button"
+                id="button"
+                name="submit"
+                src="images/checkmark.png"
+                onclick="submitButton()"
+              />
+            </div>
+          </div>
+          <div id="hideCheckout">
+            Thank You for Ordering with Meal - Happy Holidays!
+          </div>
+          <div class="text-center christmasTree">
+            <img src="images/Background.png" alt="Christmas Tree" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
+</html>
